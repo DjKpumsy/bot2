@@ -26,12 +26,12 @@ bot.onText(/\/start/, (msg) => {
 
     const webAppUrl = `https://frontzx.vercel.app/`;
 
-    bot.sendMessage(chatId, `Welcome ${firstName} ${lastName}! Click the button below to start.`, {
+    bot.sendMessage(chatId, `Welcome ${firstName} ${lastName}! Tap on th coin and see your balance rise.`, {
         reply_markup: {
             inline_keyboard: [
                 [
                     {
-                        text: 'Play',
+                        text: 'Start Now!',
                         web_app: { url: webAppUrl }
                     }
                 ]
