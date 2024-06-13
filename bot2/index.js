@@ -20,10 +20,13 @@ bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;
     const username = msg.from.username;
     const telegramId = msg.from.id;
+    const firstName = msg.from.first_name;
+    const lastName = msg.from.last_name;
+
 
     const webAppUrl = `https://frontzx.vercel.app/`;
 
-    bot.sendMessage(chatId, `Welcome! Click the button below to start.`, {
+    bot.sendMessage(chatId, `Welcome ${firstName} ${lastName}! Click the button below to start.`, {
         reply_markup: {
             inline_keyboard: [
                 [
