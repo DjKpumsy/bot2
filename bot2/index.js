@@ -25,14 +25,23 @@ bot.onText(/\/start/, (msg) => {
 
 
     const webAppUrl = `https://frontzx.vercel.app/`;
+    
+   const telegramChannelUrl = `https://t.me/your_channel_username`; // Replace with your actual Telegram channel URL
+
 
     bot.sendMessage(chatId, `Welcome ${firstName} ${lastName}! Tap on th coin and see your balance rise.`, {
         reply_markup: {
             inline_keyboard: [
-                [
+            [
                     {
                         text: 'Start Now!',
                         web_app: { url: webAppUrl }
+                    }
+                ],
+                [
+                    {
+                        text: 'Join Our Community',
+                        url: telegramChannelUrl
                     }
                 ]
             ]
